@@ -1,0 +1,8 @@
+@mixin fontstyle($fontfamily: Roboto, $color: #262626, $fontsize: 20px, $fontweight: 400, $lineheight: 25px, $letterspacing: 0) {
+	font-family: $fontfamily;
+	color: $color;
+	font-size: $fontsize;
+	font-weight: $fontweight;
+	line-height: $lineheight;
+	letter-spacing: $letterspacing;
+}

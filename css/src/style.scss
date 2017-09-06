@@ -1,368 +1,454 @@
 @import "fonts.scss";
 @import "mixin.scss";
 
-/* -- START HEADER SECTION --*/
 
-.ba-header {
-	background: #004566 url(../img/bg-hero.jpg)	center no-repeat;
-	width: 1600px;
-	height: 900px;
-}
 
-.header-top {
-	padding-left: 20px;
-	padding-right: 20px;
-	max-width: 1170px;
-	margin: 0 auto;
 
-	&__nav-box {
-		margin-top: 27px;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
+
+/* -- START creative agency SECTION  -- */
+
+.creative-agency {
+	background: #0d4869 url(../img/bg-creative-agency.jpg) center no-repeat;
+	background-size: cover;
+	height: 100vh;
+
+	&__logo {
+		margin-top: 100px;
+	}
+
+	&__nav {
+		margin-top: 92px;
 
 		&-menu {
 			list-style: none;
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			margin-right: 50px;
 
 			&-item {
-				display: inline-block;
-				padding-left: 46px;
-			}
+				padding-left: 52.5px;
 
-			&-link {
-				color: #fffefe;
-				font-family: 'Lato', sans-serif;
-				font-size: 14px;
-				font-weight: 400;
-				line-height: 38px;
-				text-transform: uppercase;
-				text-decoration: none;
-				margin-bottom: 50px;
+				&-link {
+					@include fontstyle(Lato, #fffefe, 14px, 400, 38px, 0.001em);
+					text-transform: uppercase;
+					text-decoration: none;
 
-				&:hover {
-					color: #c8461d;
-					border-bottom: 1px solid #c8461d;
+					&:hover {
+						color: #d14727;
+						border-bottom: 1px solid #d14727;
+						transition: border-bottom 0.3s ease-in-out 0.3s;
+					}
 				}
 			}
 		}
 	}
-}
 
-.header-top {
+	&__box {
+		max-width: 615px;
+		margin: 190px auto;
+		position: relative;
 
-	&__title-box {
-		width: 600px;
-		margin: 193px auto 0;
-
-		&-name {
-			color: #fff;
-			font-family: 'Raleway', sans-serif;
-			font-size: 48px;
-			font-weight: 700;
-			line-height: 60px;
+		&-title {
+			@include fontstyle(Raleway, #fff, 48px, 700, 60px);
 			text-transform: uppercase;
 			text-align: center;
 
 			&::after {
 				content: '';
 				position: absolute;
-				top: 410px;
-				right: 510px;
+				top: 100px;
+				right: 265px;
 				width: 86px;
 				height: 2px;
-				background-color: #fff;
+				background: #fff;
 			}
 		}
 
-		&-subtitle {
-			color: #fffefe;
-			font-family: 'Lato', sans-serif;
-			font-size: 22px;
-			font-weight: 400;
-			line-height: 30px;
-			letter-spacing: 0.05em;
+		&-text {
+			@include fontstyle (Lato, #fff, 22px, 400, 30px, 0.05em);
 			text-align: center;
-			padding-top: 45px;
+			padding-top: 48px;
+		}
+	}
+
+	&__box-arrow {
+		text-align: center;
+		padding: 46px;
+
+		&-link {
+			border-radius: 50%;
+
+			&-button {
+				fill: #fff;
+
+				&:hover {
+					fill: #d14727;
+					transition: fill 0.3s;
+				}
+			}
 		}
 	}
 }
 
-.header-top {
 
-	&__button-box {
-		text-align: center;
-		margin-top: 213px;
-	}
-}
+/* -- END creative agency SECTION  -- */
 
-/* -- END HEADER SECTION --*/
+/* -- START our services SECTION  -- */
 
-/* -- START SECOND SECTION  -- */
-
-.second	{
+.ourservices {
 	background: #fff;
-	width: 1600px;
-	height: 735px;
-}
 
-.wrap {
-	padding-left: 20px;
-	padding-right: 20px;
-	max-width: 1170px;
-	margin: 0 auto;
-}
+	&__box {
+		width: 615px;
+		margin: 92px auto 120px;
+		position: relative;
 
-.second-style__title-box {
-	margin: 0 auto;
-
-	&-name {
-		color: #222222;
-		font-family: 'Raleway', sans-serif;
-		font-size: 35px;
-		font-weight: 700;
-		line-height: 60px;
-		text-transform: uppercase;
-		text-align: center;
-		margin-top: 100px;
-
-		&::after {
-			content: '';
-			position: absolute;
-			top: 1115px;
-			right: 510px;
-			width: 86px;
-			height: 2px;
-			background-color: #222222;
+		&-title {
+			@include fontstyle(Raleway, #1d1d1d, 35px, 700, 60px);
+			@include title(#1d1d1d, 117px, 265px);
 		}
 	}
-}
 
-.second-style__item-box {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-	margin-top: 138px;
-
-	&-first, &-second, &-third {
+	&__icon-box {
+		height: 149px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
-		width: 316px;
-		text-align: center;
+		justify-content: space-around;
 
-		&-image {
-			display: flex;
-			align-items: center;
-			justify-content: center;
+
+		&-telephone {
+			fill: #005494;
+			width: 75px;
+			height: 132px;
+
+			&:hover {
+				fill: #d14727;
+			}
 		}
 
+		&-responsive {
+			fill: #005494;
+			width: 192px;
+			height: 149px;
+
+			&:hover {
+				fill: #d14727;
+			}
+		}
+
+		&-verification {
+			fill: #005494;
+			width: 116px;
+			height: 166px;
+
+			&:hover {
+				fill: #d14727;
+			}
+		}
+	}
+
+	&__title-box {
+		text-align: center;
+		margin-top: 35px;
+
 		&-title {
-			color: #222222;
-			font-family: 'Lato', sans-serif;
-			font-weight: 400;
-			font-size: 24px;
-			line-height: 24px;
-			letter-spacing: 0.01em;
+			@include fontstyle(Lato, #1d1d1d, 24px, 400, 24px);
+		}
+	}
+
+	&__text-box {
+		text-align: center;
+		margin: 30px 15px 119px 15px;
+
+		&-text {
+			@include fontstyle(Lato, #1d1d1d, 16px, 400, 30px);
+		}
+	}
+}
+
+
+
+/* -- END our services SECTION  -- */
+
+/* -- START more SECTION  -- */
+
+.more {
+	background: #222222 url(../img/bg-more.jpg) center no-repeat;
+	background-size: cover;
+	margin-top: -10px;
+
+	&__info-box {
+		text-align: left;
+		margin-left: -25px;
+		margin-top: 143px;
+
+		&-title {
+			@include fontstyle(Lato, #fff, 45px, 400, 90px, 0.035em);
+			text-transform: uppercase;
 		}
 
 		&-text {
-			display: inline-block;
-			color: #222222;
-			font-family: 'Lato', sans-serif;
-			font-weight: 400;
-			font-size: 16px;
-			line-height: 30px;
+			@include fontstyle(Lato, #fff, 22px, 100, 28px);
+			padding-right: 30px;
+			margin-top: -15px;
+		}
+
+		&-button-box {
+			margin-top: 60px;
+			margin-bottom: 110px;
+
+			&-link {
+				@include fontstyle(Lato, #fff, 18px, 400, 28px);
+
+				&:hover {
+					text-decoration: none;
+					color: #d14727;
+				}
+			}
 		}
 	}
-}
 
-/* -- END SECOND SECTION  -- */
+	&__image-box {
+		position: relative;
 
-/* -- START THIRD SECTION  -- */
-
-.third	{
-	background: #1a1a1a url(../img/iphone-bg.jpg) center no-repeat;
-	width: 1600px;
-	height: 500px;
-	overflow: hidden;
-}
-
-.wrap {
-	padding-left: 20px;
-	padding-right: 20px;
-	max-width: 1170px;
-	margin: 0 auto;
-}
-
-.third__text-box {
-	text-align: left;
-	margin-top: 188px;
-  margin-left: -24px;
-
-	&-title {
-		color: #ffffff;
-		font-family: 'Lato', sans-serif;
-		font-size: 45px;
-		font-weight: 400;
-		line-height: 1px;
-		text-transform: uppercase;
-	}
-
-	&-text {
-		width: 516px;
-		color: #ffffff;
-		font-family: 'Lato', sans-serif;
-		font-size: 22px;
-		font-weight: 100;
-		line-height: 28px;
-		margin-top: 12px;
-	}
-
-	&-link {
-		color: #ffffff;
-		font-family: Lato;
-		font-size: 18px;
-		font-weight: 400;
-		line-height: 82px;
-		text-decoration: underline;
-	}
-}
-
-.third__image-box {
-	position: relative;
-	&-image {
-		position: absolute;
-		right: 77px;
-		top: 74px;
-	}
-}
-
-
-/* -- END THIRD SECTION  -- */
-
-/* -- START FOURTH SECTION  -- */
-
-.fourth	{
-	background: #fff;
-	width: 1600px;
-	height: 950px;
-}
-
-.wrap {
-	padding-left: 20px;
-	padding-right: 20px;
-	max-width: 1170px;
-	margin: 0 auto;
-}
-
-.fourth-style__title-box {
-	margin: 0 auto;
-
-	&-name {
-		color: #222222;
-		font-family: 'Raleway', sans-serif;
-		font-size: 35px;
-		font-weight: 700;
-		line-height: 60px;
-		text-transform: uppercase;
-		text-align: center;
-		margin-top: 100px;
-
-		&::after {
-			content: '';
+		&-image {
 			position: absolute;
-			top: 2352px;
-			right: 510px;
-			width: 86px;
-			height: 2px;
-			background-color: #222222;
+			top: 75px;
+			left: 220px;
 		}
 	}
 }
 
-.fourth-style__item-box {
-	margin-top: 150px
-}
 
-.fourth-style__button-box {
-	text-align: center;
-	margin-top: 82px;
 
-	&-button {
-		width: 370px;
-		color: #222222;
-		font-family: Lato;
-		font-size: 24px;
-		font-weight: 400;
-		line-height: 60px;
-		text-transform: uppercase;
-		text-decoration: none;
+/* -- END more SECTION  -- */
+
+/* -- START ourwork SECTION  -- */
+
+.ourwork {
+
+	&__title-box {
+		margin: 100px 0 130px 0;
+		position: relative;
+
+		&-title {
+			@include fontstyle(Raleway, #222222, 35px, 700, 60px);
+			@include title(#222222, 117px, 522px);
+		}
+	}
+
+	&__image-box {
+		position: relative;
+		overflow: hidden;
+
+		&:hover &-text-box {
+			top: -100%;
+		}
+
+		&:hover &-image {
+			transform: scale(1);
+			transition: .5s;
+		}
+
+
+		&-image {
+			width: 100%;
+			transform: scale(1.6);
+		}
+
+		&-text-box {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 416px;
+			background: rgba(0, 0, 0, 0.75);
+			transition: .5s;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			&-text {
+				@include fontstyle(Lato, #fff, 22px, 400, 60px);
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	&__button-box {
+		margin: 64px auto 80px;
 		border: 2px solid #222222;
-		padding: 13px 145px;
+		width: 370px;
 
-		&:hover {
-			border: 2px solid #222222;
-			color: #fff;
-			background-color: #222222;
-		}
-	}
-}
-
-
-
-/* -- END FOURTH SECTION  -- */
-
-/* -- START FIVE SECTION  -- */
-
-.five	{
-	background: #070f13 url(../img/five-bg.jpg);
-	width: 1600px;
-	height: 802px;
-}
-
-.wrap {
-	padding-left: 20px;
-	padding-right: 20px;
-	max-width: 1170px;
-	margin: 0 auto;
-}
-
-.five-style__title-box {
-	margin: 0 auto;
-
-	&-name {
+		&:hover &-link {
 		color: #fff;
-		font-family: 'Raleway', sans-serif;
-		font-size: 35px;
-		font-weight: 700;
-		line-height: 60px;
-		text-transform: uppercase;
-		text-align: center;
-		margin-top: 100px;
+		background-color: #222222;
+		}
 
-		&::after {
-			content: '';
-			position: absolute;
-			top: 2352px;
-			right: 510px;
-			width: 86px;
-			height: 2px;
-			background-color: #fff;
+		&-link {
+			@include fontstyle(Lato, #222222, 24px, 400, 55px);
+			text-transform: uppercase;
+			text-decoration: none;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
 		}
 	}
 }
 
+/* -- END ourwork SECTION  -- */
 
-/* -- END FIVE SECTION  -- */
+/* -- START getintouch SECTION  -- */
+
+.getintouch {
+	background: #0a1316 url(../img/getintouch-bg.jpg) center no-repeat;
+	background-size: cover;
+
+	&__title-box {
+		position: relative;
+		margin: 100px auto 110px;
+
+		&-title {
+			@include fontstyle(Raleway, #fff, 35px, 700, 60px);
+			text-transform: uppercase;
+			@include title(#fff, 117px, 522px);
+		}
+	}
+
+	&__social-link-box {
+		text-align: center;
+
+		&-twitter {
+			width: 46px;
+			height: 40px;
+			fill: #fff;
+
+			&:hover {
+				fill: #41abe1;
+			}
+		}
+		&-facebook {
+			width: 35px;
+			height: 40px;
+			fill: #fff;
+
+			&:hover {
+				fill: #4267b2;
+			}
+		}
+		&-linkedin {
+			width: 45px;
+			height: 42px;
+			fill: #fff;
+
+			&:hover {
+				fill: #0077b5;
+			}
+		}
+		&-vine {
+			width: 45px;
+			height: 40px;
+			fill: #fff;
+
+			&:hover {
+				fill: #00bf8e;
+			}
+		}
+		&-be {
+			width: 48px;
+			height: 36px;
+			fill: #fff;
+
+			&:hover {
+				fill: #e83426;
+			}
+		}
 
 
 
+		&--size {
+			padding: 0 11px 0 11px;
+		}
+	}
 
+	&__form-box-form {
 
+		margin: 48px auto 0;
+		width: 665px;
 
+		&-input-box {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+
+			&-text, &-email {
+				@include fontstyle(Lato, #676767, 18px, 400, 40px);
+				font-style: italic;
+				padding-left: 20px;
+				background: transparent;
+				width: 302px;
+				border: none;
+				border-bottom: 2px solid #676767;
+
+				&:focus {
+					background: rgba(255, 255, 255, 0.1);
+					outline: none;
+					color: #fff;
+					font-style: normal;
+				}
+			}
+		}
+
+		&-area-box {
+			margin: 92px auto 0;
+			width: 665px;
+
+			&-area {
+				@include fontstyle(Lato, #676767, 18px, 400, 40px);
+				font-style: italic;
+				padding-left: 20px;
+				background: transparent;
+				width: 669px;
+				border: none;
+				border-bottom: 2px solid #676767;
+
+				&:focus {
+					background: rgba(255, 255, 255, 0.1);
+					outline: none;
+					color: #fff;
+					font-style: normal;
+				}
+			}
+		}
+
+		&-button-box {
+			margin: 48px 0 122px 0;
+			text-align: center;
+
+			&-button {
+				@include fontstyle(Lato, #fff, 24px, 400, 50px, 0.055em);
+				text-transform: uppercase;
+				width: 183px;
+				background: transparent;
+				border: none;
+				border: 3px solid #fff;
+
+				&:hover {
+					color: #05090d;
+					border: 3px solid transparent;
+					background: #fff
+				}
+			}
+		}
+	}
+}
+
+/* -- END getintouch SECTION  -- */
 
 
 
@@ -379,7 +465,11 @@
 .ba-container{
 	padding-left: 20px;
 	padding-right: 20px;
-	max-width: 1600px;
+	max-width: 1170px;
+}
+
+.sprite {
+	display: none;
 }
 
 

@@ -6,3 +6,18 @@
 	line-height: $lineheight;
 	letter-spacing: $letterspacing;
 }
+
+@mixin title($color: #fff, $top: 100px, $right: 265px) {
+	text-transform: uppercase;
+	text-align: center;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: $top;
+		right: $right;
+		width: 86px;
+		height: 2px;
+		background: $color;
+	}
+}
